@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Car Purchase Conversation Extractor</title>
+<link rel="stylesheet" href="styles.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+<header>
+<h1><i class="fas fa-car"></i> Car Purchase Conversation Extractor</h1>
+</header>
+<section id="content">
+    <div id="input-section">
+        <textarea id="inputText" placeholder="Paste the conversation text here..."></textarea>
+        <label for="fileInput" class="custom-file-upload">
+            <i class="fas fa-upload"></i> Upload a PDF or Text File
+        </label>
+        <input type="file" id="fileInput" accept=".pdf, .txt">
+        <button id="extractButton"><i class="fas fa-search"></i> Extract Information</button>
+    </div>
+
+    <div id="output">
+        <h2><i class="fas fa-info-circle"></i> Extracted Information</h2>
+        <div id="customerRequirements">
+            <h3><i class="fas fa-user"></i> Customer Requirements</h3>
+            <pre id="requirementsOutput"></pre>
+        </div>
+        <div id="companyPolicies">
+            <h3><i class="fas fa-building"></i> Company Policies</h3>
+            <pre id="policiesOutput"></pre>
+        </div>
+        <div id="customerObjections">
+            <h3><i class="fas fa-exclamation-triangle"></i> Customer Objections</h3>
+            <pre id="objectionsOutput"></pre>
+        </div>
+    </div>
+</section>
+
+<script src="script.js"></script>
+<div id="charts">
+    <canvas id="barChart" width="400" height="200"></canvas>
+    <canvas id="pieChart" width="400" height="200"></canvas>
+</div>
+</body>
+</html>
